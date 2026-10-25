@@ -30,4 +30,4 @@ Enquanto estiver em branco, a página mostra "O Pix entra no ar em breve".
 
 ## Vídeo do YouTube
 
-Quando o primeiro vídeo sair, siga o comentário na seção "Último vídeo" do `index.html`.
+A seção "Último vídeo" do `index.html` mostra o vídeo mais recente. Para trocar, substitua o código depois de `/embed/` pelo do vídeo novo (o que vem depois de `youtu.be/` ou `?v=`) e atualize a legenda logo abaixo.
