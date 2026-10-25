@@ -235,6 +235,10 @@ a.card:hover { transform: translateY(-3px); border-color: var(--ink); }
   border: 1px dashed var(--line); border-radius: 12px; padding: 20px; text-align: center;
   color: var(--muted); font-size: 14px; margin: 36px 0;
 }
+.sources { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--line); }
+.sources h2 { font-size: 22px; margin: 24px 0 12px; }
+.sources ul { margin: 0; padding-left: 20px; font-size: 16px; color: var(--muted); }
+.sources li { margin-bottom: 6px; }
 .share { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 40px; }
 
 /* Página simples (obrigado / 404) */
