@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E se a Lua desaparecesse? — Mas, e se?</title>
+  <meta name="description" content="O que aconteceria com a Terra se a Lua sumisse: marés menores, noites mais escuras e um eixo bem menos estável.">
+  <meta property="og:title" content="E se a Lua desaparecesse?">
+  <meta property="og:description" content="Marés menores, noites mais escuras e um planeta bem menos estável.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Mas, e se? — página inicial">
+        <img src="logo.svg" alt="" width="26" height="38">
+        <span>Mas, e se?</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="/">Início</a>
+        <a href="/#artigos" aria-current="page">Artigos</a>
+        <a href="/#newsletter">Newsletter</a>
+        <a href="apoie.html">Apoie</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--
+    MODELO DE ARTIGO
+    Para criar um novo: copie este arquivo, renomeie (ex.: e-se-os-dinossauros-nao-tivessem-sido-extintos.html),
+    troque o título, a descrição, o vídeo e o texto, e adicione um card novo na seção "Artigos" do index.html.
+  -->
+  <main id="conteudo" class="article">
+    <article class="wrap">
+      <p class="meta">Universo · leitura de 4 min</p>
+      <h1>E se a Lua desaparecesse?</h1>
+      <p class="lead">Ela está no céu há mais de 4 bilhões de anos e a gente quase não pensa nela. Mas a Lua faz muito mais do que iluminar a noite.</p>
+
+      <!--
+        QUANDO O VÍDEO DESTA PERGUNTA SAIR, cole aqui (trocando ID_DO_VIDEO pelo código do vídeo):
+
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/ID_DO_VIDEO" title="Vídeo: E se a Lua desaparecesse?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      -->
+
+      <div class="callout">
+        <span class="dot" aria-hidden="true"></span>
+        <p><strong>Resposta curta:</strong> a Terra não seria destruída, mas as marés ficariam bem menores, as noites muito mais escuras e, ao longo de milhões de anos, o clima poderia ficar bem mais instável.</p>
+      </div>
+
+      <h2>As marés encolheriam</h2>
+      <p>A maré é causada principalmente pela gravidade da Lua puxando os oceanos. O Sol também participa, mas com menos da metade da força. Sem a Lua, sobraria só a maré do Sol, com cerca de um terço do tamanho atual.</p>
+      <p>Isso mudaria a vida em praias, mangues e costões, onde muitos animais dependem do sobe e desce da água para se alimentar e se reproduzir.</p>
+
+      <div class="ad-slot">Espaço para anúncio (cole aqui o código do Google AdSense)</div>
+
+      <h2>As noites ficariam muito mais escuras</h2>
+      <p>A Lua cheia ilumina a paisagem o suficiente para enxergar sem lanterna. Sem ela, toda noite seria como uma noite de lua nova.</p>
+      <p>Vários animais usam o ciclo da Lua como relógio. Na Grande Barreira de Corais, por exemplo, os corais liberam seus ovos em massa, todos ao mesmo tempo, poucos dias depois de uma lua cheia. Sem esse sinal, esse tipo de sincronia ficaria muito mais difícil.</p>
+
+      <h2>O eixo da Terra ficaria instável</h2>
+      <p>A Terra gira inclinada, e é essa inclinação que cria as estações do ano. Hoje ela muda muito pouco ao longo do tempo, e parte dessa estabilidade vem da Lua.</p>
+      <p>Sem ela, a inclinação poderia variar bem mais ao longo de milhões de anos, trazendo mudanças fortes no clima. Os cientistas ainda discutem o tamanho exato desse efeito, mas a Lua funciona como uma espécie de estabilizador.</p>
+
+      <h2>E os dias?</h2>
+      <p>A Lua freia a rotação da Terra bem devagar, por causa do atrito das marés. É por isso que os dias vêm ficando um pouquinho mais longos ao longo de milhões de anos. Sem a Lua, esse freio quase sumiria e os dias passariam a mudar muito mais lentamente.</p>
+
+      <div class="callout">
+        <span class="dot" aria-hidden="true"></span>
+        <p><strong>Mas, e se…</strong> a Terra tivesse duas luas? Deixa sua pergunta nos comentários do vídeo, ela pode virar o próximo episódio.</p>
+      </div>
+
+      <div class="share">
+        <button class="btn" type="button" id="compartilhar">Compartilhar este artigo</button>
+        <a class="btn ghost" href="/#artigos">Ver outros artigos</a>
+      </div>
+      <p id="aviso-copia" role="status" style="margin-top:12px;color:var(--muted);font-size:16px"></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="ano">2026</span> Mas, e se?</span>
+      <nav aria-label="Rodapé">
+        <a href="https://www.youtube.com/@youtubemasese" target="_blank" rel="noopener">YouTube</a>
+        <a href="apoie.html">Apoie</a>
+        <a href="apoie.html#anuncie">Anuncie</a>
+        <a href="mailto:SEU_EMAIL@exemplo.com">Contato</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    document.getElementById('compartilhar').addEventListener('click', async function () {
+      var dados = { title: document.title, url: location.href };
+      var aviso = document.getElementById('aviso-copia');
+      try {
+        if (navigator.share) { await navigator.share(dados); return; }
+        await navigator.clipboard.writeText(location.href);
+        aviso.textContent = 'Link copiado!';
+      } catch (e) {
+        aviso.textContent = 'Copie o link na barra do navegador para compartilhar.';
+      }
+    });
+  </script>
+</body>
+</html>
