@@ -22,9 +22,12 @@ Site estático (HTML + CSS), publicado na Netlify direto deste repositório.
 
 O formulário usa o Netlify Forms. No painel da Netlify, em **Forms**, ative a detecção de formulários; os e-mails cadastrados aparecem lá.
 
-## Ainda falta preencher
+## Pix (página Apoie)
 
-- `SEU_USUARIO`: usuário no Apoia.se e no Ko-fi (`apoie.html`)
-- `SEU_EMAIL@exemplo.com`: e-mail de contato
-- `[VALOR]`: valores dos níveis de apoio (`apoie.html`)
-- Vídeo do YouTube: quando o primeiro vídeo sair, siga o comentário na seção "Último vídeo" do `index.html`
+Os botões de R$ 1, R$ 2, R$ 5, R$ 10 e "outro valor" geram o QR Code e o código copia e cola sozinhos.
+Para ativar, abra `apoie.html`, procure **CONFIGURAÇÃO DO PIX** e preencha `chave`, `nome` e `cidade`.
+Enquanto estiver em branco, a página mostra "O Pix entra no ar em breve".
+
+## Vídeo do YouTube
+
+Quando o primeiro vídeo sair, siga o comentário na seção "Último vídeo" do `index.html`.

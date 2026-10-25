@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apoie o canal — Mas, e se?</title>
-  <meta name="description" content="Apoie o Mas, e se? e ajude a próxima pergunta a sair. Vote nos temas, assista antes e apareça nos créditos.">
+  <meta name="description" content="Apoie o Mas, e se? com um Pix de qualquer valor e ajude a próxima pergunta a sair.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,49 +35,60 @@
         <div>
           <p class="eyebrow">apoie o canal</p>
           <h1>Ajude a próxima pergunta a sair.</h1>
-          <p class="lead">Cada vídeo leva dias de pesquisa, roteiro e animação. Com o seu apoio, o canal continua independente e com mais perguntas por mês.</p>
+          <p class="lead">Cada vídeo leva dias de pesquisa, roteiro e animação. Um Pix de qualquer valor ajuda o canal a continuar independente e com mais perguntas por mês.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#pix">Apoiar com Pix</a>
+          </div>
         </div>
         <img class="hero-mark" src="logo.svg" alt="" width="280" height="405">
       </div>
     </section>
 
-    <!-- NÍVEIS DE APOIO — troque [VALOR] e os links pelos da sua página no Apoia.se ou Ko-fi -->
-    <section class="alt" aria-labelledby="titulo-niveis">
+    <!-- PIX -->
+    <section id="pix" class="alt" aria-labelledby="titulo-pix">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="titulo-niveis">Formas de apoiar</h2>
-          <p>Escolha a que fizer mais sentido para você.</p>
+          <h2 id="titulo-pix">Apoie com Pix</h2>
+          <p>Escolha um valor e pague pelo app do seu banco.</p>
         </div>
-        <div class="support-grid">
-          <div class="support-card">
-            <span class="dot" aria-hidden="true"></span>
-            <h3>Curioso</h3>
-            <p>[VALOR] por mês</p>
-            <ul>
-              <li>Seu nome nos créditos dos vídeos</li>
-              <li>Acesso ao grupo de apoiadores</li>
-            </ul>
-            <a class="btn" href="https://apoia.se/SEU_USUARIO" target="_blank" rel="noopener">Apoiar</a>
+
+        <div class="pix">
+          <div class="pix-values">
+            <p class="pix-label" id="rotulo-valor">Quanto você quer apoiar?</p>
+            <div class="chips" role="group" aria-labelledby="rotulo-valor">
+              <button type="button" class="chip" data-valor="1" aria-pressed="false">R$ 1</button>
+              <button type="button" class="chip" data-valor="2" aria-pressed="false">R$ 2</button>
+              <button type="button" class="chip" data-valor="5" aria-pressed="true">R$ 5</button>
+              <button type="button" class="chip" data-valor="10" aria-pressed="false">R$ 10</button>
+              <button type="button" class="chip" data-valor="outro" aria-pressed="false">Outro valor</button>
+            </div>
+            <div class="pix-outro" id="campo-outro" hidden>
+              <label for="valor-outro">Digite o valor (R$)</label>
+              <input id="valor-outro" type="number" inputmode="decimal" min="1" step="0.01" placeholder="Ex.: 15">
+              <p class="pix-hint">Se deixar em branco, você digita o valor direto no app do banco.</p>
+            </div>
+            <p class="pix-thanks">Todo valor faz diferença, de verdade. Obrigado por apoiar!</p>
           </div>
-          <div class="support-card">
-            <span class="dot" aria-hidden="true"></span>
-            <h3>Investigador</h3>
-            <p>[VALOR] por mês</p>
-            <ul>
-              <li>Tudo do nível Curioso</li>
-              <li>Vote nas próximas perguntas</li>
-              <li>Assista aos vídeos antes de todo mundo</li>
-            </ul>
-            <a class="btn" href="https://apoia.se/SEU_USUARIO" target="_blank" rel="noopener">Apoiar</a>
-          </div>
-          <div class="support-card">
-            <span class="dot" aria-hidden="true"></span>
-            <h3>Um café, uma vez</h3>
-            <p>Qualquer valor, sem assinatura</p>
-            <ul>
-              <li>Uma ajuda pontual, do jeito que puder</li>
-            </ul>
-            <a class="btn ghost" href="https://ko-fi.com/SEU_USUARIO" target="_blank" rel="noopener">Pagar um café</a>
+
+          <div class="pix-pay">
+            <div id="pix-ativo" hidden>
+              <div class="pix-qr" id="pix-qr" role="img" aria-label="QR Code do Pix"></div>
+              <p class="pix-amount" id="pix-valor" aria-live="polite"></p>
+              <label class="pix-label" for="pix-codigo">Pix copia e cola</label>
+              <textarea id="pix-codigo" readonly rows="3"></textarea>
+              <button type="button" class="btn" id="copiar-pix">Copiar código Pix</button>
+              <p class="pix-status" id="pix-status" role="status"></p>
+              <ol class="pix-steps">
+                <li>Abra o app do seu banco e entre na área Pix.</li>
+                <li>Escaneie o QR Code ou use "Pix copia e cola".</li>
+                <li>Confira o nome do recebedor e confirme.</li>
+              </ol>
+            </div>
+            <div id="pix-em-breve" class="pix-soon">
+              <span class="dot" aria-hidden="true"></span>
+              <p><strong>O Pix entra no ar em breve.</strong> Enquanto isso, se inscrever no canal já ajuda muito.</p>
+              <a class="btn ghost" href="https://www.youtube.com/@youtubemasese?sub_confirmation=1" target="_blank" rel="noopener">Inscrever-se</a>
+            </div>
           </div>
         </div>
       </div>
@@ -113,7 +124,7 @@
           <h2 id="titulo-anuncie">Anuncie no canal</h2>
         </div>
         <p style="margin:0 0 24px;max-width:680px;color:var(--muted)">Sua marca para um público curioso, que gosta de aprender. Fazemos menções e integrações que combinam com o tema de cada vídeo.</p>
-        <a class="btn" href="mailto:SEU_EMAIL@exemplo.com?subject=Parceria%20com%20o%20Mas%2C%20e%20se%3F">Falar sobre parceria</a>
+        <a class="btn" href="mailto:canalytmasese@gmail.com?subject=Parceria%20com%20o%20Mas%2C%20e%20se%3F">Falar sobre parceria</a>
       </div>
     </section>
   </main>
@@ -125,10 +136,126 @@
         <a href="https://www.youtube.com/@youtubemasese" target="_blank" rel="noopener">YouTube</a>
         <a href="apoie.html">Apoie</a>
         <a href="apoie.html#anuncie">Anuncie</a>
-        <a href="mailto:SEU_EMAIL@exemplo.com">Contato</a>
+        <a href="mailto:canalytmasese@gmail.com">Contato</a>
       </nav>
     </div>
   </footer>
-  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+
+  <script src="qrcode.js"></script>
+  <script>
+    /* ===================== CONFIGURAÇÃO DO PIX =====================
+       Preencha os três campos abaixo e o Pix é ativado automaticamente.
+       - chave:  sua chave Pix (e-mail, CPF/CNPJ só números, celular no formato +5567999999999, ou chave aleatória)
+       - nome:   nome do recebedor, como aparece no banco (até 25 letras)
+       - cidade: sua cidade (até 15 letras)
+    ================================================================ */
+    var PIX = {
+      chave: "",
+      nome: "",
+      cidade: ""
+    };
+
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    function semAcento(t) {
+      return t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^A-Za-z0-9 ]/g, '').toUpperCase().trim();
+    }
+    function campo(id, valor) {
+      return id + String(valor.length).padStart(2, '0') + valor;
+    }
+    function crc16(texto) {
+      var crc = 0xFFFF;
+      for (var i = 0; i < texto.length; i++) {
+        crc ^= texto.charCodeAt(i) << 8;
+        for (var j = 0; j < 8; j++) {
+          crc = (crc & 0x8000) ? ((crc << 1) ^ 0x1021) : (crc << 1);
+          crc &= 0xFFFF;
+        }
+      }
+      return crc.toString(16).toUpperCase().padStart(4, '0');
+    }
+    function codigoPix(valor) {
+      var conta = campo('00', 'br.gov.bcb.pix') + campo('01', PIX.chave.trim());
+      var p = campo('00', '01') +
+        campo('26', conta) +
+        campo('52', '0000') +
+        campo('53', '986') +
+        (valor ? campo('54', valor.toFixed(2)) : '') +
+        campo('58', 'BR') +
+        campo('59', semAcento(PIX.nome).slice(0, 25)) +
+        campo('60', semAcento(PIX.cidade).slice(0, 15)) +
+        campo('62', campo('05', '***')) +
+        '6304';
+      return p + crc16(p);
+    }
+
+    var configurado = PIX.chave.trim() && PIX.nome.trim() && PIX.cidade.trim();
+    var chips = document.querySelectorAll('.chip');
+    var campoOutro = document.getElementById('campo-outro');
+    var inputOutro = document.getElementById('valor-outro');
+    var qrBox = document.getElementById('pix-qr');
+    var codigoBox = document.getElementById('pix-codigo');
+    var valorBox = document.getElementById('pix-valor');
+    var status = document.getElementById('pix-status');
+    var valorAtual = 5;
+
+    function formatar(v) {
+      return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
+    function atualizar() {
+      if (!configurado) return;
+      var codigo = codigoPix(valorAtual);
+      codigoBox.value = codigo;
+      valorBox.textContent = valorAtual ? 'Apoio de ' + formatar(valorAtual) : 'Valor livre: digite no app do banco';
+      status.textContent = '';
+      qrBox.innerHTML = '';
+      if (window.qrcode) {
+        var qr = qrcode(0, 'M');
+        qr.addData(codigo);
+        qr.make();
+        qrBox.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+      }
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+        chip.setAttribute('aria-pressed', 'true');
+        if (chip.dataset.valor === 'outro') {
+          campoOutro.hidden = false;
+          inputOutro.focus();
+          var v = parseFloat(inputOutro.value);
+          valorAtual = v > 0 ? v : null;
+        } else {
+          campoOutro.hidden = true;
+          valorAtual = parseFloat(chip.dataset.valor);
+        }
+        atualizar();
+      });
+    });
+
+    inputOutro.addEventListener('input', function () {
+      var v = parseFloat(inputOutro.value.replace(',', '.'));
+      valorAtual = v > 0 ? Math.round(v * 100) / 100 : null;
+      atualizar();
+    });
+
+    document.getElementById('copiar-pix').addEventListener('click', async function () {
+      try {
+        await navigator.clipboard.writeText(codigoBox.value);
+        status.textContent = 'Código copiado! Agora cole no app do seu banco.';
+      } catch (e) {
+        codigoBox.select();
+        status.textContent = 'Selecione o código acima e copie manualmente.';
+      }
+    });
+
+    if (configurado) {
+      document.getElementById('pix-ativo').hidden = false;
+      document.getElementById('pix-em-breve').hidden = true;
+      atualizar();
+    }
+  </script>
 </body>
 </html>
